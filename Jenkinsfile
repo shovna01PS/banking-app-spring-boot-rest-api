@@ -12,12 +12,12 @@ pipeline {
         //     }
         // }
         
-        stage('Package') {
-            steps {
-                bat 'mvn package'    
-		            echo "Maven Package Goal Executed Successfully!";
-            }
-        }
+        // stage('Package') {
+        //     steps {
+        //         bat 'mvn package'    
+		      //       echo "Maven Package Goal Executed Successfully!";
+        //     }
+        // }
         
         // stage('JUNit Reports') {
         //     steps {
