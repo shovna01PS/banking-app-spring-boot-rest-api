@@ -1,5 +1,9 @@
 pipeline {
     agent any
+	tools {
+        // Use the Maven installation defined in the tool configuration
+        maven 'maven'
+    }
     stages {
         // stage('Git Checkout') {
         //     steps {
