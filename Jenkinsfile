@@ -43,10 +43,15 @@ pipeline {
         }
 
 	stage("Quality gate") {
-            steps {
-                waitForQualityGate abortPipeline: true
+    steps {
+        script {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+                error "Quality Gate failed: ${qg.status}"
             }
         }
+    }
+}
         
     }
     post {
